@@ -6,6 +6,7 @@ function ProjectDescription(props) {
       <p className="text-show">
         {props.description}
       </p>
+      <a className ="here mobile-link" href="#">Live Project</a>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SvgLine from "./SvgLine";
 import ProjectDescription from "./ProjectDescription";
 import ProjectTitle from "./ProjectTitle";
@@ -11,6 +11,7 @@ const Project = React.forwardRef((props, ref) => {
   const [hoverDiv2, setHoverDiv2] = useState(false);
   const [hovered3, setHovered3] = useState(false);
   const [hoverDiv3, setHoverDiv3] = useState(false);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 600);
   const toggleHover1 = (e) => {
     setHovered1(!hovered1);
     setHoverDiv1(!hoverDiv1);
@@ -29,8 +30,20 @@ const Project = React.forwardRef((props, ref) => {
     console.log(hovered1);
     setHoverDiv3(!hoverDiv3);
   };
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 600);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   return (
     <div className="projects" id="portfolio" ref={ref}>
+
+
       <ProjectTitle
         onMouseOver={toggleHover1}
         onMouseOut={toggleHover1}
@@ -38,13 +51,12 @@ const Project = React.forwardRef((props, ref) => {
         hoverDiv1={hoverDiv1}
         title="React CV Generator"
       >
-        <Link className={hovered1 ? "hover-div1-show" : "hover-div1-hide"} />
+        {isDesktop? <Link className={hovered1 ? "hover-div1-show" : "hover-div1-hide"} /> : ""}
       </ProjectTitle>
-
-      <SvgLine
+      {isDesktop ? <SvgLine
         className={hoverDiv1 ? "svg-container-show" : "svg-container-hide"}
-      />
-      <ProjectDescription description ={"This app takes user's information and generates a resume that can be downloaded as a .pdf file"}/>
+      /> : ""}
+      <ProjectDescription description ={"This app takes the guesswork out of creating a resume. Users can input their information and the app will generate a resume that can be downloaded as a .pdf file"}/>
 
       <ProjectTitle
         onMouseOver={toggleHover2}
@@ -53,11 +65,11 @@ const Project = React.forwardRef((props, ref) => {
         hovered2={hovered2}
         hoverDiv2={hoverDiv2}
       >
-        <Link className={hovered2 ? "hover-div2-show" : "hover-div2-hide"} />
+       {isDesktop ? <Link className={hovered2 ? "hover-div2-show" : "hover-div2-hide"} /> : ""} 
       </ProjectTitle>
-      <SvgLine
+      {isDesktop ? <SvgLine
         className={hoverDiv2 ? "svg-container-show" : "svg-container-hide"}
-      />
+      /> : ""}
       <ProjectDescription description={"As a book nerd, I was excited to create an app where users can track what they're currently reading, and discover new books they might like. Users can track read and unread books, rate books, and discover other books by an author thanks to the New York Times books API."}/>
       <ProjectTitle
         onMouseOver={toggleHover3}
@@ -66,12 +78,12 @@ const Project = React.forwardRef((props, ref) => {
         hovered3={hovered3}
         hoverDiv3={hoverDiv3}
       >
-        <Link className={hovered3 ? "hover-div3-show" : "hover-div3-hide"} />
+        {isDesktop ? <Link className={hovered3 ? "hover-div3-show" : "hover-div3-hide"} /> : ""}
       </ProjectTitle>
-      <SvgLine
+      {isDesktop ? <SvgLine
         className={hoverDiv3 ? "svg-container-show" : "svg-container-hide"}
-      />
-      <ProjectDescription />
+      /> : ""}
+      <ProjectDescription description ={"A to-do list app where users can create project based to-dos and add tasks to each project. Users can rank tasks in order of importance. I used Googles's Firebase Authorization and Realtime Database so users can sign in and out and save their to-dos."}/>
     </div>
   );
 });
