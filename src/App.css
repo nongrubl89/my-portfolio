@@ -39,12 +39,12 @@
   }
 }
 
-.here{
+.here {
   text-decoration: none;
   color: #fca311;
 }
 
-.here:hover{
+.here:hover {
   color: white;
 }
 
@@ -96,7 +96,7 @@
   text-decoration: none;
   color: black;
   font-family: "Rubik", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: xx-large;
   display: grid;
   justify-content: right;
@@ -133,15 +133,40 @@
   align-content: center;
   transition: width 0.5s linear;
   font-size: large;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
 
-.footer{
-  background-color: #fafafa;
-  height: 45em;
+.contact {
+  background-color: #cccbcb;
+  height: max-content;
   grid-row: 4/5;
   width: 100vw;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
 
+.form-group {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+label {
+  grid-column: 1/2;
+  justify-content: center;
+
+  display: grid;
+
+  align-content: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: large;
+}
+
+input {
+  grid-column: 2/3;
+}
 
 .svg-container-show {
   display: grid;
@@ -175,6 +200,19 @@
   animation: dash 1s 1 ease;
 }
 
+.form-control,
+.form-control-message {
+  border-radius: 6px;
+  margin: 2em;
+  padding: 1em;
+  border: none;
+  width: 400px;
+}
+
+.form-control {
+  height: 2em;
+}
+
 @keyframes dash {
   from {
     stroke-dashoffset: 300;
@@ -198,14 +236,13 @@
   background-color: var(--navy);
   width: 100%;
   color: white;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 100px);
   align-content: center;
   padding-left: 80%;
-  height:10vh;
-  gap:.25em;
+  height: 10vh;
+  gap: 0.25em;
 }
-
 
 .nav-item {
   background: none;
@@ -216,7 +253,7 @@
   font-weight: 400;
   transition: background 0.4s linear, color 0.4s linear;
   border-radius: 6px;
-  height:3em;
+  height: 3em;
   display: grid;
   align-items: center;
   animation: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 1 slideInFromRight;
@@ -233,12 +270,11 @@
   height: 90vh;
 }
 
-.mobile-link{
+.mobile-link {
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
-
   /* html, body{
     overflow-x: hidden;
   }
@@ -247,43 +283,45 @@
     position: relative;
   } */
 
-  body{
-    width:100%;
+  body {
+    width: 100%;
   }
 
-  .container{
+  .container {
     display: grid;
     width: 100%;
     overflow: hidden;
   }
-  .navbar{
+  .navbar {
     justify-content: center;
     justify-items: center;
-    padding-left:0;
+    padding-left: 0;
     grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
+    gap: 0.5em;
   }
-  .nav-item{
+  .nav-item {
     font-size: medium;
   }
-  .intro{
-    height:100vh;
+  .intro {
+    height: 100vh;
     grid-column: 1/3;
   }
-  .intro-text-wrapper{
-    padding:3em;
+  .intro-text-wrapper {
+    padding: 3em;
     align-content: normal;
     text-align: right;
     grid-template-rows: 23% auto;
-    width:80%;
-    
+    width: 80%;
   }
-  .svg-container-hide, .hover-div1-hide, .hover-div2-hide, .hover-div3-hide{
+  .svg-container-hide,
+  .hover-div1-hide,
+  .hover-div2-hide,
+  .hover-div3-hide {
     display: none;
     background-color: #fafafa;
   }
 
-  .mobile-link{
+  .mobile-link {
     display: grid;
     justify-self: center;
     padding: 1em;
@@ -293,36 +331,36 @@
     height: max-content;
   }
 
-  .projects{
-    grid-template-rows: .5fr 1fr .5fr 1fr .5fr 1fr;
+  .projects {
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
     background-color: #fafafa;
   }
 
-  .project-description{
-    grid-column:1/4;
+  .project-description {
+    grid-column: 1/4;
     text-align: center;
     padding: 1em;
     grid-template-rows: 80% 20%;
   }
 
-  #portfolio{
-width: 100%;
-display: grid;
-grid-template-columns: repeat(3,1fr);
-height: max-content;
-grid-template-rows: 60px max-content 60px max-content 60px max-content;
+  #portfolio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: max-content;
+    grid-template-rows: 60px max-content 60px max-content 60px max-content;
   }
 
-  .title-container{
+  .title-container {
     grid-column: 1/4;
     justify-content: center;
   }
 
-  .project-title{
+  .project-title {
     font-size: 1.5em;
   }
 
-  .text-show{
+  .text-show {
     width: 90%;
   }
 }

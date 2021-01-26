@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Project from "./components/projects/Project";
 import Contact from "./components/Contact";
+import githubLogo from ".src/images/linkedin.png";
 
 import React, { useRef } from "react";
 
