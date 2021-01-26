@@ -3,15 +3,22 @@ import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Project from "./components/projects/Project";
 import Contact from "./components/Contact";
-import githubLogo from ".src/images/linkedin.png";
-
 import React, { useRef } from "react";
 
 function App() {
   const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const handleClick = () => {
+  const handleClickNav = () => {
     portfolioRef.current.scrollIntoView({
+      behavior: "smooth",
+      inline: "nearest",
+      block: "nearest",
+    });
+  };
+
+  const handleClickContact = () => {
+    contactRef.current.scrollIntoView({
       behavior: "smooth",
       inline: "nearest",
       block: "nearest",
@@ -19,10 +26,13 @@ function App() {
   };
   return (
     <div className="container">
-      <Navbar handleClick={handleClick} />
+      <Navbar
+        handleClickNav={handleClickNav}
+        handleClickContact={handleClickContact}
+      />
       <Intro />
       <Project ref={portfolioRef} />
-      <Contact />
+      <Contact ref={contactRef} />
     </div>
   );
 }

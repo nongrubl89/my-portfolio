@@ -138,8 +138,8 @@
 }
 
 .contact {
-  background-color: #cccbcb;
-  height: max-content;
+  background-color: var(--navy);
+  height: 100vh;
   grid-row: 4/5;
   width: 100vw;
   display: grid;
@@ -155,7 +155,7 @@
 label {
   grid-column: 1/2;
   justify-content: center;
-
+  color: white;
   display: grid;
 
   align-content: center;
@@ -166,6 +166,10 @@ label {
 
 input {
   grid-column: 2/3;
+}
+
+h4 {
+  color: white;
 }
 
 .svg-container-show {
