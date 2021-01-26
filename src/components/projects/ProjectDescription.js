@@ -17,9 +17,9 @@ function ProjectDescription(props) {
     <div className="project-description">
       <p className="text-show">
         {props.description}
-        {isDesktop ? <ColoredLine /> : ""}
+        {isDesktop ? <ColoredLine href={props.href} /> : ""}
       </p>
-      <a className="mobile-link" href="#">
+      <a className="mobile-link" href={props.href}>
         Live Project
       </a>
     </div>

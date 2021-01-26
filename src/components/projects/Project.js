@@ -48,6 +48,7 @@ const Project = React.forwardRef((props, ref) => {
         hovered1={hovered1}
         hoverDiv1={hoverDiv1}
         title="React CV Generator"
+        href="https://nongrubl89.github.io/React-CV-Generator/"
       >
         {isDesktop ? <Link className="hover-div1-show" /> : ""}
       </ProjectTitle>
@@ -59,6 +60,7 @@ const Project = React.forwardRef((props, ref) => {
         ""
       )}
       <ProjectDescription
+        href={"https://github.com/nongrubl89/React-CV-Generator"}
         description={
           "This app takes the guesswork out of creating a resume. Users can input their information and the app will generate a resume that can be downloaded as a .pdf file"
         }
@@ -70,6 +72,7 @@ const Project = React.forwardRef((props, ref) => {
         title="Book Tracker App"
         hovered2={hovered2}
         hoverDiv2={hoverDiv2}
+        href="https://nongrubl89.github.io/Library/"
       >
         {isDesktop ? <Link className="hover-div2-show" /> : ""}
       </ProjectTitle>
@@ -81,6 +84,7 @@ const Project = React.forwardRef((props, ref) => {
         ""
       )}
       <ProjectDescription
+        href={"https://github.com/nongrubl89/Library"}
         description={
           "As a book nerd, I was excited to create an app where users can track what they're currently reading, and discover new books they might like. Users can track read and unread books, rate books, and discover other books by an author thanks to the New York Times books API."
         }
@@ -91,6 +95,7 @@ const Project = React.forwardRef((props, ref) => {
         title="To-Do List"
         hovered3={hovered3}
         hoverDiv3={hoverDiv3}
+        href="https://nongrubl89.github.io/To-Do-List/"
       >
         {isDesktop ? <Link className="hover-div3-show" /> : ""}
       </ProjectTitle>
@@ -102,8 +107,9 @@ const Project = React.forwardRef((props, ref) => {
         ""
       )}
       <ProjectDescription
+        href={"https://github.com/nongrubl89/To-Do-List"}
         description={
-          "A to-do list app where users can create project based to-dos and add tasks to each project. Users can rank tasks in order of importance. I used Googles's Firebase Authorization and Realtime Database so users can sign in and out and save their to-dos."
+          "A to-do list app where users can create project based to-dos and add tasks to each project. Users can rank tasks in order of importance. I used Google's Firebase Authorization and Realtime Database so users can sign in and out and save their to-dos."
         }
       />
     </div>

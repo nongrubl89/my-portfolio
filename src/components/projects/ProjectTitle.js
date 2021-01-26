@@ -7,7 +7,7 @@ function ProjectTitle(props) {
       <a
         onMouseOver={props.onMouseOver}
         onMouseOut={props.onMouseOut}
-        href="nongrubl89.github.io/BookTracker"
+        href={props.href}
         className="project-title"
       >
         {props.title}

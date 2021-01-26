@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ColoredLine() {
+export default function ColoredLine(props) {
   return (
     <div
       style={{ display: "grid", justifyContent: "left", paddingTop: ".25em" }}
@@ -14,7 +14,7 @@ export default function ColoredLine() {
           width: 300,
         }}
       />
-      <a href="#" className="desktop-link">
+      <a href={props.href} className="desktop-link">
         See the code here
       </a>
     </div>
