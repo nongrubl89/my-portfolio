@@ -19,7 +19,7 @@ function ProjectDescription(props) {
         {props.description}
         {isDesktop ? <ColoredLine href={props.href} /> : ""}
       </p>
-      <a className="mobile-link" href={props.href}>
+      <a className="mobile-link" href={props.hrefLive}>
         Live Project
       </a>
     </div>
