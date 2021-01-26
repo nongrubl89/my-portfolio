@@ -30,7 +30,7 @@ function App() {
         handleClickNav={handleClickNav}
         handleClickContact={handleClickContact}
       />
-      <Intro />
+      <Intro handleClickContact={handleClickContact} />
       <Project ref={portfolioRef} />
       <Contact ref={contactRef} />
     </div>

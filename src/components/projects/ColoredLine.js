@@ -14,6 +14,9 @@ export default function ColoredLine() {
           width: 300,
         }}
       />
+      <a href="#" className="desktop-link">
+        See the code here
+      </a>
     </div>
   );
 }

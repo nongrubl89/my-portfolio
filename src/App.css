@@ -40,8 +40,11 @@
 }
 
 .here {
-  text-decoration: none;
+  border: none;
+  background-color: var(--navy);
+  font-size: x-large;
   color: #fca311;
+  padding: 0;
 }
 
 .here:hover {
@@ -321,6 +324,7 @@ h4 {
 
 .mobile-link {
   display: none;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -360,7 +364,7 @@ h4 {
     align-content: normal;
     text-align: right;
     grid-template-rows: 23% auto;
-    width: 80%;
+    width: 78%;
   }
   .svg-container-hide,
   .hover-div1-hide,
@@ -411,5 +415,23 @@ h4 {
 
   .text-show {
     width: 90%;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-form {
+    grid-column: 1/2;
+    justify-items: left;
+    width: 80vw;
+    grid-template-columns: 20% 10% 70%;
+  }
+
+  .form-control,
+  .form-control-message {
+    width: 50vw;
+  }
+  .links {
+    grid-column: 1/2;
   }
 }
