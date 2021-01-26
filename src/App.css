@@ -139,17 +139,42 @@
 
 .contact {
   background-color: var(--navy);
-  height: 100vh;
+  height: 90vh;
   grid-row: 4/5;
   width: 100vw;
   display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: repeat(6, 1fr);
   justify-items: center;
   align-content: center;
 }
 
 .form-group {
   display: grid;
-  grid-template-columns: 20% 80%;
+  /* grid-template-columns: 20% 80%; */
+}
+
+#in-touch {
+  grid-row: 1/2;
+  grid-column: 2/4;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-start: 4;
+  grid-column: 2/4;
+  gap: 1em;
+}
+
+#contact-form {
+  grid-row-start: 2;
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  width: 50%;
 }
 
 label {
@@ -172,6 +197,17 @@ h4 {
   color: white;
 }
 
+.submit-btn {
+  background-color: #fca311;
+  border-radius: 8px;
+  border: none;
+  padding: 1.5em;
+  color: white;
+  font-weight: 1em;
+  grid-column: 1/4;
+  justify-self: center;
+}
+
 .svg-container-show {
   display: grid;
   grid-column: 2/3;
@@ -181,6 +217,15 @@ h4 {
 
 .svg-container-hide {
   display: none;
+}
+.desktop-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  padding-top: 0.25em;
+}
+.desktop-link:hover {
+  color: #fca311;
 }
 
 .hover-div1-hide,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import GithubLogo from "../images/githublogo-1.png";
-import LinkedInLogo from "../images/linkedinlogo-1.png";
+import GithubLogo from "../images/githubwhite.png";
+import LinkedInLogo from "../images/linkedInwhite.png";
 
 const Contact = React.forwardRef((props, ref) => {
   const [name, setName] = useState("");
@@ -42,46 +42,40 @@ const Contact = React.forwardRef((props, ref) => {
 
   return (
     <div className="contact" ref={ref}>
-      <h4>Get in touch below!</h4>
       <form id="contact-form" onSubmit={sendEmail} method="POST">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            name="name"
-            type="text"
-            className="form-control"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email</label>
-          <input
-            name="email"
-            type="email"
-            className="form-control"
-            aria-describedby="emailHelp"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            name="message"
-            className="form-control-message"
-            rows="6"
-            cols="20"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
+        <label htmlFor="name">Name</label>
+        <input
+          name="name"
+          type="text"
+          className="form-control"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <label htmlFor="exampleInputEmail1">Email</label>
+        <input
+          name="email"
+          type="email"
+          className="form-control"
+          aria-describedby="emailHelp"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <label htmlFor="message">Message</label>
+        <textarea
+          name="message"
+          className="form-control-message"
+          rows="6"
+          cols="15"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <button type="submit" className="submit-btn">
           Submit
         </button>
       </form>
-      <div className="links">
-        <h4>Or, find me here:</h4>
+      <div class="links">
         <a href="https://github.com/nongrubl89">
           <img src={GithubLogo} alt="GitHub"></img>
         </a>
