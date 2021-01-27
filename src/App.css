@@ -360,6 +360,8 @@ h4 {
   grid-template-columns: repeat(3, 100px);
   align-content: center;
   padding-left: 78%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   height: 10vh;
   gap: 0.25em;
 }
