@@ -73,7 +73,7 @@ const Project = React.forwardRef((props, ref) => {
         title="Book Tracker App"
         hovered2={hovered2}
         hoverDiv2={hoverDiv2}
-        href="https://nongrubl89.github.io/Library/"
+        href="https://nongrubl89.github.io/Book-Tracker-App/"
       >
         {isDesktop ? <Link className="hover-div2-show" /> : ""}
       </ProjectTitle>
@@ -85,8 +85,8 @@ const Project = React.forwardRef((props, ref) => {
         ""
       )}
       <ProjectDescription
-        href={"https://github.com/nongrubl89/Library"}
-        hrefLive={"https://nongrubl89.github.io/Library/"}
+        href={"https://github.com/nongrubl89/Book-Tracker-App"}
+        hrefLive={"https://nongrubl89.github.io/Book-Tracker-App/"}
         description={
           "As a book nerd, I was excited to create an app where users can track what they're currently reading, and discover new books they might like. Users can track read and unread books, rate books, and discover other books by an author thanks to the New York Times books API."
         }
