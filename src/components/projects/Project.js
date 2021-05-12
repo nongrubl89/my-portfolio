@@ -97,7 +97,7 @@ const Project = React.forwardRef((props, ref) => {
         title="To-Do List"
         hovered3={hovered3}
         hoverDiv3={hoverDiv3}
-        href="https://nongrubl89.github.io/To-Do-List/"
+        href="http://lisaburgnon.com/react-to-do-list/"
       >
         {isDesktop ? <Link className="hover-div3-show" /> : ""}
       </ProjectTitle>
@@ -109,10 +109,10 @@ const Project = React.forwardRef((props, ref) => {
         ""
       )}
       <ProjectDescription
-        href={"https://github.com/nongrubl89/To-Do-List"}
-        hrefLive={"https://nongrubl89.github.io/To-Do-List/"}
+        href={"https://github.com/nongrubl89/react-to-do-list"}
+        hrefLive={"http://lisaburgnon.com/react-to-do-list/"}
         description={
-          "A to-do list app where users can create project based to-dos and add tasks to each project. Users can rank tasks in order of importance. I used Google's Firebase Authorization and Realtime Database so users can sign in and out and save their to-dos."
+          "A to-do list made with React. Users can create to-do projects and add tasks to the project. I used React-Bootstrap for the styling. I am currently working on adding sign-in with Google Firebase so users can save their tasks to Google's Realtime DB."
         }
       />
     </div>
