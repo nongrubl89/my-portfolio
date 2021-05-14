@@ -1,9 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navigation from "./components/Navigation";
 import Intro from "./components/Intro";
 import Project from "./components/projects/Project";
 import Contact from "./components/Contact";
 import React, { useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 
 function App() {
   const portfolioRef = useRef(null);
@@ -25,15 +27,15 @@ function App() {
     });
   };
   return (
-    <div className="container">
-      <Navbar
+    <Container fluid className="p-0">
+      <Navigation
         handleClickNav={handleClickNav}
         handleClickContact={handleClickContact}
       />
       <Intro handleClickContact={handleClickContact} />
       <Project ref={portfolioRef} />
       <Contact ref={contactRef} />
-    </div>
+    </Container>
   );
 }
 

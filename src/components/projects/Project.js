@@ -1,121 +1,26 @@
 import React, { useState, useEffect } from "react";
-import SvgLine from "./SvgLine";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import CardComponent from "./CardComponent";
 import ProjectDescription from "./ProjectDescription";
 import ProjectTitle from "./ProjectTitle";
 import Link from "./Link.js";
 
 const Project = React.forwardRef((props, ref) => {
-  const [hovered1, setHovered1] = useState(false);
-  const [hoverDiv1, setHoverDiv1] = useState(false);
-  const [hovered2, setHovered2] = useState(false);
-  const [hoverDiv2, setHoverDiv2] = useState(false);
-  const [hovered3, setHovered3] = useState(false);
-  const [hoverDiv3, setHoverDiv3] = useState(false);
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 600);
-  const toggleHover1 = (e) => {
-    setHovered1(!hovered1);
-    setHoverDiv1(!hoverDiv1);
-    console.log("hovered1", hovered1);
-    console.log("hoverDiv1", hoverDiv1);
-  };
-
-  const toggleHover2 = (e) => {
-    setHovered2(!hovered2);
-    console.log(hovered1);
-    setHoverDiv2(!hoverDiv2);
-  };
-
-  const toggleHover3 = (e) => {
-    setHovered3(!hovered3);
-    console.log(hovered1);
-    setHoverDiv3(!hoverDiv3);
-  };
-
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 600);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
   return (
-    <div className="projects" id="portfolio" ref={ref}>
-      <ProjectTitle
-        onMouseOver={toggleHover1}
-        onMouseOut={toggleHover1}
-        hovered1={hovered1}
-        hoverDiv1={hoverDiv1}
+    <Container fluid className="card-container pt-3 pb-3" ref={ref}>
+      <CardComponent
+        title="React To-Do List"
+        body="A to-do list made with React. Users can create to-do projects and add tasks to the project. I used React-Bootstrap for the styling. I am currently working on adding sign-in with Google Firebase so users can save their tasks to Google's Realtime DB."
+      />
+      <CardComponent
+        title="Book Tracker"
+        body="As a book nerd, I was excited to create an app where users can track what they're currently reading, and discover new books they might like. Users can track read and unread books, rate books, and discover other books by an author thanks to the New York Times books API."
+      />
+      <CardComponent
         title="React CV Generator"
-        href="https://nongrubl89.github.io/React-CV-Generator/"
-      >
-        {isDesktop ? <Link className="hover-div1-show" /> : ""}
-      </ProjectTitle>
-      {isDesktop ? (
-        <SvgLine
-          className={hoverDiv1 ? "svg-container-show" : "svg-container-hide"}
-        />
-      ) : (
-        ""
-      )}
-      <ProjectDescription
-        href={"https://github.com/nongrubl89/React-CV-Generator"}
-        hrefLive={"https://nongrubl89.github.io/React-CV-Generator/"}
-        description={
-          "This app takes the guesswork out of creating a resume. Users can input their information and the app will generate a resume that can be downloaded as a .pdf file"
-        }
+        body="This app takes the guesswork out of creating a resume. Users can input their information and the app will generate a resume that can be downloaded as a .pdf file"
       />
-
-      <ProjectTitle
-        onMouseOver={toggleHover2}
-        onMouseOut={toggleHover2}
-        title="Book Tracker App"
-        hovered2={hovered2}
-        hoverDiv2={hoverDiv2}
-        href="https://nongrubl89.github.io/Book-Tracker-App/"
-      >
-        {isDesktop ? <Link className="hover-div2-show" /> : ""}
-      </ProjectTitle>
-      {isDesktop ? (
-        <SvgLine
-          className={hoverDiv2 ? "svg-container-show" : "svg-container-hide"}
-        />
-      ) : (
-        ""
-      )}
-      <ProjectDescription
-        href={"https://github.com/nongrubl89/Book-Tracker-App"}
-        hrefLive={"https://nongrubl89.github.io/Book-Tracker-App/"}
-        description={
-          "As a book nerd, I was excited to create an app where users can track what they're currently reading, and discover new books they might like. Users can track read and unread books, rate books, and discover other books by an author thanks to the New York Times books API."
-        }
-      />
-      <ProjectTitle
-        onMouseOver={toggleHover3}
-        onMouseOut={toggleHover3}
-        title="To-Do List"
-        hovered3={hovered3}
-        hoverDiv3={hoverDiv3}
-        href="http://lisaburgnon.com/react-to-do-list/"
-      >
-        {isDesktop ? <Link className="hover-div3-show" /> : ""}
-      </ProjectTitle>
-      {isDesktop ? (
-        <SvgLine
-          className={hoverDiv3 ? "svg-container-show" : "svg-container-hide"}
-        />
-      ) : (
-        ""
-      )}
-      <ProjectDescription
-        href={"https://github.com/nongrubl89/react-to-do-list"}
-        hrefLive={"http://lisaburgnon.com/react-to-do-list/"}
-        description={
-          "A to-do list made with React. Users can create to-do projects and add tasks to the project. I used React-Bootstrap for the styling. I am currently working on adding sign-in with Google Firebase so users can save their tasks to Google's Realtime DB."
-        }
-      />
-    </div>
+    </Container>
   );
 });
 
