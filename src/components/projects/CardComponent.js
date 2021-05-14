@@ -17,15 +17,21 @@ export default function CardComponent(props) {
               <div className="text-center text-md-left mb-1 ml-md-4">
                 <Button
                   id={props.projectId}
-                  className="mr-1 button-in-card border-0 text-dark shadow-sm"
+                  className="mr-1 border-0 text-dark shadow-sm"
                 >
-                  Live Project
+                  <a href={props.linkToProject}>
+                    <i class="fas fa-external-link-alt p-1"></i>
+                    Live Project
+                  </a>
                 </Button>
                 <Button
                   id={props.codeId}
-                  className="button-in-card border-0 text-dark shadow-sm"
+                  className="border-0 text-dark shadow-sm"
                 >
-                  Codebase
+                  <a href={props.linkToCode}>
+                    <i className="fas fa-code-branch p-1"></i>
+                    Codebase
+                  </a>
                 </Button>
               </div>
             </Col>
