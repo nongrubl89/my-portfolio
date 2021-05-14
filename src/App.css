@@ -75,10 +75,11 @@ input {
   font-weight: 500;
   font-size: 1em;
 }
+
 #button-intro {
   font-family: "Spectral";
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1em !important;
   color: #fdcc07;
 }
 
