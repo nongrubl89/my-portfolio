@@ -14,11 +14,17 @@ export default function CardComponent(props) {
               <Card.Body className="text-center text-md-left">
                 <Card.Text>{props.body}</Card.Text>
               </Card.Body>
-              <div className="text-center text-md-left mb-1">
-                <Button className=" mr-1 button-in-card border-0 text-dark shadow-sm">
+              <div className="text-center text-md-left mb-1 ml-md-4">
+                <Button
+                  id={props.projectId}
+                  className="mr-1 button-in-card border-0 text-dark shadow-sm"
+                >
                   Live Project
                 </Button>
-                <Button className="button-in-card border-0 text-dark shadow-sm">
+                <Button
+                  id={props.codeId}
+                  className="button-in-card border-0 text-dark shadow-sm"
+                >
                   Codebase
                 </Button>
               </div>

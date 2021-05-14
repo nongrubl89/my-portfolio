@@ -14,7 +14,7 @@ function Intro(props) {
     <Jumbotron fluid className="d-flex align-items-center mb-0">
       {/* <Container> */}
       {props.children}
-      <div className="pl-3">
+      <div className="pl-3  pt-xs-4">
         <h4 className="intro-header">Hello and Welcome!</h4>
         <p className="intro-body">
           I am an early-career, self-taught web developer with a background in

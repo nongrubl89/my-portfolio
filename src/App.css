@@ -81,10 +81,38 @@
 }
 
 .card-title {
-  color: rgb(204, 86, 145);
+  /* color: rgb(204, 86, 145); */
   font-family: "Spectral";
-  font-weight: 500;
-  font-size: 1em;
+  font-weight: 700 !important;
+  font-size: 1.75em !important;
+  /* background: radial-gradient(
+      circle farthest-corner at top left,
+      rgb(177, 79, 216) 0%,
+      rgba(225, 243, 97, 0) 50%
+    ),
+    radial-gradient(
+      circle farthest-side at top right,
+      rgb(240, 119, 203) 0%,
+      rgba(181, 176, 177, 0) 40%
+    ),
+    radial-gradient(
+      circle farthest-corner at bottom right,
+      rgb(135, 192, 214) 0%,
+      rgba(204, 104, 119, 0) 33%
+    ),
+    radial-gradient(
+      circle farthest-corner at top right,
+      rgb(58, 60, 153) 0%,
+      rgba(155, 221, 240, 0) 50%
+    ),
+    radial-gradient(
+      ellipse at bottom center,
+      rgb(204, 86, 145) 0%,
+      rgba(254, 43, 0, 0) 80%
+    );
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #292b2c;
 }
 
 .intro-header,
@@ -94,23 +122,50 @@
   font-size: 1.75em !important;
 }
 
-.card-title {
+/* .card-title {
   font-family: "Spectral";
   font-weight: 700 !important;
   font-size: 1.75em !important;
-}
+} */
 
 .card-container,
 .card {
-  background-color: #ece8df !important;
+  background-color: #f3f3f3 !important;
 }
 
 .card-container {
   min-height: 100vh !important;
 }
 
-.button-in-card {
+#btgh-button,
+#bt-button {
   background-color: rgb(135, 192, 214) !important;
   font-family: "Spectral";
   font-weight: 600;
+  opacity: 90%;
+}
+
+#cvggh-button,
+#cvg-button {
+  background-color: #b14fd8 !important;
+  opacity: 90%;
+  font-family: "Spectral";
+  font-weight: 600;
+}
+
+#tdl-button,
+#tdlgh-button {
+  background-color: #f077cc;
+  opacity: 80%;
+  font-family: "Spectral";
+  font-weight: 600;
+}
+
+#btgh-button:hover,
+#bt-button:hover,
+#cvggh-button:hover,
+#cvg-button:hover,
+#tdl-button:hover,
+#tdlgh-button:hover {
+  opacity: 99%;
 }
