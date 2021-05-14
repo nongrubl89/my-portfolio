@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import GithubLogo from "../images/githubwhite.png";
-import LinkedInLogo from "../images/linkedInwhite.png";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
 const Contact = React.forwardRef((props, ref) => {

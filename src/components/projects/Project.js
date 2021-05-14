@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import CardComponent from "./CardComponent";
-import ProjectDescription from "./ProjectDescription";
-import ProjectTitle from "./ProjectTitle";
-import Link from "./Link.js";
 
 const Project = React.forwardRef((props, ref) => {
   return (

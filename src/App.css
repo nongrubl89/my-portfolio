@@ -82,6 +82,10 @@ input {
   color: #fdcc07;
 }
 
+.bg-transparent {
+  font-size: 0.6em !important;
+}
+
 .card-title {
   font-family: "Spectral";
   font-weight: 700 !important;

@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import Resume from "../images/BurgnonResume2021.pdf";
-// import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import { Navbar, Nav, Button } from "react-bootstrap";
 
 function Navigation(props) {
@@ -14,13 +14,14 @@ function Navigation(props) {
   const onResumeClick = () => {
     window.open(Resume);
   };
-  // const styles = useSpring({
-  //   loop: false,
-  //   to: { opacity: 1 },
-  //   // to: { opacity: 0.5 },
-  //   from: { opacity: 0 },
-  //   delay: 400,
-  // });
+  const styles = useSpring({
+    loop: false,
+    config: { duration: 1000 },
+    to: { opacity: 1 },
+    // to: { opacity: 0.5 },
+    from: { opacity: 0 },
+    delay: 200,
+  });
   return (
     <Navbar
       fixed="top"
@@ -29,26 +30,29 @@ function Navigation(props) {
     >
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-        <Nav className="justify-content-end">
-          <Button
+        <Nav style={styles} className="justify-content-end p-2">
+          <animated.button
+            style={styles}
             className="bg-transparent border-0 text-dark"
             onClick={props.handleClickNav}
           >
             Portfolio
-          </Button>
+          </animated.button>
 
-          <Button
+          <animated.button
+            style={styles}
             onClick={onResumeClick}
             className="bg-transparent border-0 text-dark"
           >
             Résumé
-          </Button>
-          <Button
+          </animated.button>
+          <animated.button
+            style={styles}
             onClick={props.handleClickContact}
             className="bg-transparent border-0 text-dark"
           >
             Contact
-          </Button>
+          </animated.button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
