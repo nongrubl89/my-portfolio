@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import { Container, Form, Button, Row, Col, Toast } from "react-bootstrap";
 
 const Contact = React.forwardRef((props, ref) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
+
+  const toggleShow = () => {
+    console.log(show);
+    setShow(!show);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    toggleShow();
     const templateParams = {
       from_name: name,
       message: message,
@@ -72,6 +78,12 @@ const Contact = React.forwardRef((props, ref) => {
               Submit
             </Button>
           </Form>
+          <Toast show={show} onClose={toggleShow} delay={3000} autohide>
+            <Toast.Header></Toast.Header>
+            <Toast.Body>
+              Thanks so much for your message! I'll be in touch soon.
+            </Toast.Body>
+          </Toast>
         </Col>
       </Row>
       <div className="pt-4 pb-4">

@@ -34,7 +34,8 @@
     );
 }
 
-.navbar-gradient {
+.navbar-gradient,
+.toast-header {
   background-color: #c5b99e;
   background-image: radial-gradient(
       circle farthest-corner at top left,

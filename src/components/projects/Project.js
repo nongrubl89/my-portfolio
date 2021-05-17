@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import CardComponent from "./CardComponent";
 
 const Project = React.forwardRef((props, ref) => {

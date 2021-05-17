@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import Resume from "../images/BurgnonResume2021.pdf";
 import { useSpring, animated } from "react-spring";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 function Navigation(props) {
   const [scroll, setScroll] = useState(false);
