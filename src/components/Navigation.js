@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import Resume from "../images/LBurgnonResume2021.pdf";
+import Resume from "../images/LisaBurgnonResume2021.pdf";
 import { useSpring, animated } from "react-spring";
 import { Navbar, Nav } from "react-bootstrap";
 
@@ -11,9 +11,11 @@ function Navigation(props) {
       setScroll(window.scrollY < 300);
     });
   }, []);
+
   const onResumeClick = () => {
     window.open(Resume);
   };
+
   const styles = useSpring({
     loop: false,
     config: { duration: 1000 },
@@ -44,7 +46,7 @@ function Navigation(props) {
             onClick={onResumeClick}
             className="bg-transparent border-0 text-dark"
           >
-            Résumé
+            Resume
           </animated.button>
           <animated.button
             style={styles}
