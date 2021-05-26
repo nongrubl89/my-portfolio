@@ -8,7 +8,7 @@ const Project = React.forwardRef((props, ref) => {
       <CardComponent
         projectId="tdl-button"
         linkToCode="https://github.com/nongrubl89/react-to-do-list"
-        linkToProject="http://lisaburgnon.com/react-to-do-list/"
+        linkToProject="https://trusting-golick-0b1997.netlify.app/"
         codeId="tdlgh-button"
         title="React To-Do List"
         body="A to-do list made with React. Users can create to-do projects and add tasks to the project. I used React-Bootstrap for the styling. I am currently working on adding sign-in with Google Firebase so users can save their tasks to Google's Realtime DB."

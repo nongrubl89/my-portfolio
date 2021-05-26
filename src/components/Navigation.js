@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import Resume from "../images/BurgnonResume2021.pdf";
+import Resume from "../images/LBurgnonResume2021.pdf";
 import { useSpring, animated } from "react-spring";
 import { Navbar, Nav } from "react-bootstrap";
 
